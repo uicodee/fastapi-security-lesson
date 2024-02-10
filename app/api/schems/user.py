@@ -3,15 +3,10 @@ from pydantic import BaseModel, Field
 
 class User(BaseModel):
 
-    firstname: str = Field(
-        title="Firstname",
-        description="User firstname",
-        min_length=1,
-        max_length=50
-    )
-    lastname: str = Field(
-        title="Lastname",
-        description="User lastname",
+    full_name: str = Field(
+        alias="fullName",
+        title="Full name",
+        description="User full name",
         min_length=1,
         max_length=50
     )
